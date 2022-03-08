@@ -1,56 +1,56 @@
-=>#include<iostream>
+#include<iostream>
 #include<iomanip>
 #include<fstream>
 using namespace std;
 class student
 {
-   public:
-   int Rollno,Year;
-   char Name[20];
-   char Class[20];
-   double TotalMarks;
-   void getinpt()
-   {
-     cout<<"Enter student details:- "<<endl;
-     cout<<"\nEnter student roll number: ";
-   cin>>Rollno;
-   cout<<"Enter student year: ";
-   cin>>Year;
-   cout<<"Enter student name: ";
-   cin>>Name;
-   cout<<"Enter student class: ";
-   cin>>Class;
-   cout<<"Enter student total marks: ";
-   cin>>TotalMarks;
-   }
+Â  Â public:
+Â  Â int Rollno,Year;
+Â  Â char Name[20];
+Â  Â char Class[20];
+Â  Â double TotalMarks;
+Â  Â void getinpt()
+Â  Â {
+Â  Â  Â cout<<"Enter student details:- "<<endl;
+Â  Â  Â cout<<"\nEnter student roll number: ";
+Â  Â cin>>Rollno;
+Â  Â cout<<"Enter student year: ";
+Â  Â cin>>Year;
+Â  Â cout<<"Enter student name: ";
+Â  Â cin>>Name;
+Â  Â cout<<"Enter student class: ";
+Â  Â cin>>Class;
+Â  Â cout<<"Enter student total marks: ";
+Â  Â cin>>TotalMarks;
+Â  Â }
 };
 int main()
-{  
+{ Â 
 student s1[5];
-   char ch;
-   for(int i=0;i<3;i++)
-   s1[i].getinpt();
-   ofstream f1;
-   f1.open("C:\\Users\\22sho\\OneDrive\\Desktop\\C++\\helloworld\\prog1\\program1\\Student.txt");
-   if(!f1)
-   { 
-     cout<<"Error in opening the read file!! ";
-   exit(100);
-   }
-   for(int i=0;i<3;i++)
-   {
-     f1<<setw(5)<<s1[i].Rollno;
-   f1<<setw(5)<<s1[i].Name;
-   f1<<setw(5)<<s1[i].Class;
-   f1<<setw(5)<<s1[i].Year;
-   f1<<setw(5)<<s1[i].TotalMarks<<endl;
-   }
-   f1.close();
-   ifstream f2;
-   f2.open("C:\\Users\\22sho\\OneDrive\\Desktop\\C++\\helloworld\\prog1\\program1\\Student.txt");
-   while(f2.get(ch));
-     cout<<ch;
-   
-   return 0;
+Â  Â char ch;
+Â  Â for(int i=0;i<3;i++)
+Â  Â s1[i].getinpt();
+Â  Â ofstream f1;
+Â  Â f1.open("C:\\Users\\22sho\\OneDrive\\Desktop\\C++\\helloworld\\prog1\\program1\\Student.txt");
+Â  Â if(!f1)
+Â  Â { 
+Â  Â  Â cout<<"Error in opening the read file!! ";
+Â  Â exit(100);
+Â  Â }
+Â  Â for(int i=0;i<3;i++)
+Â  Â {
+Â  Â  Â f1<<setw(5)<<s1[i].Rollno;
+Â  Â f1<<setw(5)<<s1[i].Name;
+Â  Â f1<<setw(5)<<s1[i].Class;
+Â  Â f1<<setw(5)<<s1[i].Year;
+Â  Â f1<<setw(5)<<s1[i].TotalMarks<<endl;
+Â  Â }
+Â  Â f1.close();
+Â  Â ifstream f2;
+Â  Â f2.open("C:\\Users\\22sho\\OneDrive\\Desktop\\C++\\helloworld\\prog1\\program1\\Student.txt");
+Â  Â while(f2.get(ch));
+Â  Â  Â cout<<ch;
+Â  Â 
+Â  Â return 0;
 }
 
